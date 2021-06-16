@@ -351,6 +351,10 @@ body {
   font-weight: 600;
 }
 
+.myskill-tag-area{
+  margin-left: 25px;
+}
+
 .myskill-tag-area .skills-tag-btn{
   display: inline-flex;
   background: lightgray;
@@ -366,6 +370,10 @@ body {
 
 .myskill-tag-area .skills-tag-btn:hover{
   background: #a6a6a6;
+}
+
+.my-tools-tag-area{
+  margin-left: 25px;
 }
 
 .my-tools-tag-area .tools-tag-btn{
@@ -448,12 +456,27 @@ body {
     font-size: 20px;
   }
 
+  .title-area{
+    margin-bottom: 10px;
+  }
+
+
   .title-area p{
     font-size: 25px;
   }
 }
 
 @media only screen and (max-width: 540px){
+
+  .artist-about-content-area .nav{
+    margin: 0px;
+  }
+
+  .artist-about-content-area .nav .nav-item{
+    font-size: 20px;
+    font-weight: 900;
+    padding: 0px 10px;
+  }
 
   .title-area{
   }
@@ -593,8 +616,6 @@ body {
   z-index: 1;
 }
 
-.testimonial-card-quotes{
-}
 
 .testimonial-card-quotes img{
   height: 80px;
@@ -637,7 +658,7 @@ body {
   padding: 10px 0px;
   font-weight: 400;
   font-size: 20px;
-  line-height: 30px;
+  line-height: 25px;
 }
 
 .carousel-indicators li{
@@ -765,7 +786,7 @@ footer p{
 @media only screen and (max-width: 767px){
 
   .feedback-section{
-    padding: 80px 10px;
+    padding: 40px 0px;
   }
 
   .footer-contact-us-area p{
@@ -774,6 +795,13 @@ footer p{
 
   .footer-link-area{
     margin: 0px 15px;
+  }
+
+  .testimonial-card-quote{
+    padding: 10px 0px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 
