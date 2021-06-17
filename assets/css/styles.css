@@ -14,13 +14,13 @@ html {
 }
 
 
-body {
+body{
   font-family: 'Roboto', sans-serif;
   background: #fff;
   font-size: 16px;
   line-height: 1.8;
   font-weight: 400;
-  overflow-x: hidden !important;
+  overflow-y: visible !important;
 }
 
 .navbar{
@@ -28,8 +28,20 @@ body {
   box-shadow: 11px 15px 29px 0 rgb(48 48 48 / 7%);
 }
 
+.navbar-light .navbar-toggler{
+  border-color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link{
+  font-weight: 600;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+  color: #000;
+}
+
 .navbar-content-area{
-  margin: 5px 15px;
+  margin: 0px;
 }
 
 .navbar-content-area .navbar-brand{
@@ -60,7 +72,7 @@ body {
 }
 
 .main-profile-section{
-  margin-top: 70px;
+  margin-top: 65px;
   position: relative;
   background: url('../img/carousel-img1.jpg');
   background-repeat: no-repeat;
@@ -85,12 +97,6 @@ body {
   opacity: .7;
 }
 
-
-.main-carousel-section .container-fluid{
-  margin: 0px;
-  padding: 0px;
-}
-
 .carousel-caption{
   position: absolute;
   top: 15%;
@@ -98,7 +104,7 @@ body {
 }
 
 .artist-img{
-  text-align: left !important;
+  text-align: left;
 }
 
 .artist-img img{
@@ -127,7 +133,7 @@ body {
 }
 
 .artist-text-area .artist-dexcription{
-  margin-top: -39px;
+  margin-top: -30px;
 }
 
 .artist-rating-area{
@@ -153,11 +159,12 @@ body {
 }
 
 .left-side-border .artist-price{
+  font-weight: 600;
   font-size: 30px;
 }
 
 .left-side-border .artist-price-info{
-  margin-top: -25px;
+  margin-top: -18px;
 }
 
 .artist-text-area .carousel-btn{
@@ -167,6 +174,7 @@ body {
   font-size: 20px;
   color: #fff;
   border: 4px solid #26947f;
+  border-radius: 10px;
 }
 
 .artist-text-area .carousel-btn:hover{
@@ -178,22 +186,25 @@ body {
 }
 
 @media only screen and (max-width: 990px){
+
   .carousel-caption{
     position: absolute;
-    top: 5%;
+    top: 10%;
   }
 
   .artist-img{
-    text-align: left;
+    text-align: center !important;
   }
 
   .artist-img img{
     height: 150px;
     width: 150px;
+    margin-top: 50px;
     margin-bottom: 20px;
   }
 
   .artist-text-area{
+    text-align: center !important;
     padding-left: 20px;
   }
 
@@ -201,17 +212,33 @@ body {
     font-size: 45px;
     font-weight: 600;
   }
+
+  .artist-text-area .carousel-btn{
+    position: absolute;
+    top: -80px;
+    right: -50px;
+  }
+
+  .artist-text-area .carousel-btn .fa-arrow-right{
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 768px){
   .rating-img{
     width: 100%;
     height: auto;
+    margin-bottom: 0px;
   }
 
   .left-side-border .artist-price{
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 600;
+  }
+
+  .left-side-border .artist-price-info{
+    font-size: 18px;
+    line-height: 15px;
   }
 
   .left-side-border p{
@@ -226,16 +253,44 @@ body {
     color: #fff;
     border: 4px solid #26947f;
   }
+
+  .artist-text-area .artist-dexcription{
+    margin-top: -10px;
+  }
 }
 
-.artist-about-section .container-fluid{
-  
+@media only screen and (max-width: 540px){
+
+  .artist-img img{
+    margin-top: 60px;
+  }
+
+
+  .left-side-border .artist-price{
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .left-side-border .artist-price-info{
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .artist-img img{
+    height: 100px;
+    width: 100px;
+    border: 8px solid rgb(30, 108, 93);
+  }
 }
+
 
 .artist-about-content-area{
   position: relative;
 }
-
+  
+.tab-content{
+  overflow-x: hidden !important;
+}
 
 .artist-about-content-area .nav{
   margin: 10px;
@@ -251,15 +306,34 @@ body {
   margin: 40px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   padding: 30px;
+  border-radius: 5px;
 }
 
 .nav-tabs{
-  border-bottom: 5px solid #dee2e6;
+  box-shadow: 11px 15px 29px 0 rgb(48 48 48 / 7%);
 }
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  position: relative;
   border-color: #fff;
   border-bottom: 5px solid #26947f;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active::after{
+  content: "";
+  position: absolute;
+  left:45%;
+  top: 43px;
+  width: 0;
+  height: 0;
+  display: inline-block;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 15px solid #26947f;
+}
+
+.nav-pill-btn-custom{
+  padding: 10px 30px;
 }
 
 .nav-tab-price-info{
@@ -343,7 +417,7 @@ body {
 }
 
 .sub-section-div{
-  margin: 20px;
+  margin: 20px 0px;
 }
 
 .sub-section-div .title-text{
@@ -357,14 +431,14 @@ body {
 
 .myskill-tag-area .skills-tag-btn{
   display: inline-flex;
-  background: lightgray;
+  background: #eaeaea;
   padding: 12px 22px;
   font-size: 16px;
   border-radius: 5px;
   font-weight: 500;
   text-decoration: none !important;
   color: #000;
-  margin-bottom: 5px;
+  margin:0px 10px 10px 0px;
   transition: 0.2s linear;
 }
 
@@ -379,7 +453,7 @@ body {
 .my-tools-tag-area .tools-tag-btn{
   align-items: center;
   background: #f4faf9;
-  border: 2px solid #80c9bc;
+  border: 3px solid #2aa38c;
   padding: 12px 22px;
   font-size: 16px;
   border-radius: 5px;
@@ -437,6 +511,22 @@ body {
 }
 
 @media only screen and (max-width: 990px){
+
+  .title-area {
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title-area p{
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
   .artist-comment p{
     font-size: 25px;
   }
@@ -448,6 +538,17 @@ body {
     width: 50px;
     margin-top: -50px;
     margin-right: 50px;
+  }
+
+  .sub-section-div {
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .myskill-tag-area{
+    text-align: center;
   }
 }
 
@@ -677,6 +778,27 @@ body {
   opacity: 0.8;
 }
 
+@media only screen and (max-width: 540px){
+  .testimonial-card-name{
+    margin-top: 30px;
+  }
+  .client-review img{
+    margin-top: 0px;
+  }
+  .feedback-section .heading-section h1{
+    font-size: 25px;
+  }
+}
+
+
+
+@media only screen and (max-width: 540px){
+  .testimonial-card{
+    margin: 60px 20px 50px 20px;
+    padding: 20px 20px;
+  }
+}
+
 footer a{
   text-decoration: none !important;
   font-size: 14px;
@@ -703,6 +825,7 @@ footer p{
   border-radius: 2px;
   padding: 20px;
   transition: 0.3s linear;
+  margin: 0px 10px;
 }
 
 .social-link a:hover .fa-facebook-f, .fa-twitter, .fa-youtube, .fa-instagram{
@@ -783,6 +906,20 @@ footer p{
   font-size: 14px;
 }
 
+.copyright-link{
+  background-color: rgba(0, 0, 0, 0.2)
+}
+
+@media only screen and (max-width: 990px){
+  footer a{
+    font-size: 20px;
+  }
+
+  .footer-link-title{
+    font-size: 30px;
+  }
+}
+
 @media only screen and (max-width: 767px){
 
   .feedback-section{
@@ -803,6 +940,10 @@ footer p{
     font-size: 14px;
     line-height: 20px;
   }
+
+  .copyright-link{
+    font-size: 12px;
+  }
 }
 
 
@@ -818,6 +959,12 @@ footer p{
   height: 100%;
   width: 100%;
   padding: 20px;
+}
+
+#baguetteBox-overlay .full-image img{
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 @media only screen and (max-width: 767px){
